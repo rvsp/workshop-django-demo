@@ -35,7 +35,7 @@ Move to your desired directory and type
     $ pip3 install django==1.11
 ```
 
-Then clone the project
+Then clone the project and install packages with `requirements.txt`
 ```
     $ pip install -r requirements.txt
     $ cd project
