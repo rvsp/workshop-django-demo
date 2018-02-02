@@ -35,7 +35,13 @@ Move to your desired directory and type
     $ pip3 install django==1.11
 ```
 
-Then clone the project and change the SMTP email configuration in `settings.py`
+Then clone the project
+```
+    $ pip install -r requirements.txt
+    $ cd project
+```
+
+change the SMTP email configuration in `settings.py`
 ```
 EMAIL_HOST = 'smtp.gmail.com'  # since you are using a gmail account
 EMAIL_PORT = 587  # Gmail SMTP port for TLS
@@ -45,8 +51,6 @@ EMAIL_HOST_PASSWORD = ''
 ```
 Finally use the following commands to run the project 
 ```
-    $ python manage.py createsuperuser
-    $ python manage.py migrate
     $ python manage.py runserver
 ```
 
