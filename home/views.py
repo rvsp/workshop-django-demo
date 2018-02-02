@@ -12,4 +12,4 @@ def about_page(request):
 	contex = {
 		"title": "About"
 	}
-	return render(request,'success.html',contex)
+	return render(request,'about.html',contex)

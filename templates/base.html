@@ -6,12 +6,11 @@
     <title>Django {% block title %}|{%endblock title %}</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    {% block styles %}
     <style>
-    body {
-        background-color: #9579b9;
-      }
-    </style>
+    body { 
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}</style>
+    {% block styles %}
+
     {% endblock styles %}
 </head>
 <body>
@@ -31,7 +30,7 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="{% url 'home' %}">Home</a></li>
-                            <li><a href="#about">About</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
                         </ul>
                     </div>
@@ -43,9 +42,19 @@
 <div class="container">
     {% block content %}
     {% endblock content %}
-
-    {% block footer %}
-    {% endblock footer %}
+    <hr class="featurette-divider">
+    <footer>
+        <div class="row">
+          <div class="col-lg-12">
+              <ul class="nav nav-pills nav-justified">
+                  <li><a href="https://tactfulness.github.io/">Designed by venkat.</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Back to top</a></li>
+              </ul>
+          </div>
+      </div>
+      </footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
